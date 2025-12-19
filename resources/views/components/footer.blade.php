@@ -56,8 +56,9 @@
         <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p class="text-sm">&copy; {{ date('Y') }} {{ $city['brand'] }}. Locally owned in Oregon.</p>
             <div class="flex space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="{{ route('privacy-policy') }}" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="{{ route('terms') }}" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="{{ route('refund-policy') }}" class="hover:text-white transition-colors">Refund Policy</a>
             </div>
         </div>
     </div>

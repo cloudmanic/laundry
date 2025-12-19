@@ -32,4 +32,34 @@ class PageController extends Controller
     {
         return view('pages.success');
     }
+
+    /**
+     * Display the privacy policy page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function privacyPolicy()
+    {
+        return view('pages.privacy-policy');
+    }
+
+    /**
+     * Display the terms of service page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function terms()
+    {
+        return view('pages.terms');
+    }
+
+    /**
+     * Display the refund policy page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function refundPolicy()
+    {
+        return view('pages.refund-policy');
+    }
 }
