@@ -77,9 +77,8 @@
             {{-- Right Side: Visual --}}
             <div class="flex-1 w-full relative">
                 <div class="relative z-10">
-                    {{-- Replace with /images/hero-laundry-bag.jpg when image is generated --}}
                     <img
-                        src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800&h=1000"
+                        src="/images/sherwood-bag-van.png"
                         alt="{{ $city['brand'] }} service in action"
                         class="aspect-[4/5] lg:aspect-[3/4] shadow-2xl rounded-[60px] object-cover w-full"
                     />
