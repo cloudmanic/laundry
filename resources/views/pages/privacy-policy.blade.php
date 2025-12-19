@@ -76,7 +76,7 @@
                 <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900">9. Contact Us</h2>
                 <p class="text-slate-600 mb-2">If you have questions about this Privacy Policy, please contact us:</p>
                 <ul class="list-none text-slate-600 space-y-1">
-                    <li><strong>Email:</strong> {{ $city['contact']['email'] }}</li>
+                    <li><strong>Email:</strong> {{ $city['contact']['support_email'] }}</li>
                     <li><strong>Phone:</strong> {{ $city['contact']['phone'] }}</li>
                 </ul>
             </div>
