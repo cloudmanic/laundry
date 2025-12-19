@@ -10,7 +10,7 @@
             {{-- Left Side: Content --}}
             <div class="flex-1 text-left">
                 <div class="inline-flex items-center space-x-3 bg-emerald-50 border border-emerald-100 px-4 py-2 rounded-full mb-8">
-                    <span class="text-emerald-700 text-xs font-black uppercase tracking-[0.2em]">Locally Owned - {{ $city['contact']['address']['city'] }}, {{ $city['contact']['address']['state'] }}</span>
+                    <span class="text-emerald-700 text-xs font-black uppercase tracking-[0.2em]">Locally Owned - {{ $city['name'] }}, {{ $city['contact']['address']['state'] }}</span>
                 </div>
 
                 <h1 class="text-5xl md:text-7xl font-black leading-[1] mb-6 text-slate-900 tracking-tighter">
@@ -62,10 +62,20 @@
                     <p class="mt-4 text-red-600 text-sm font-medium">{{ session('error') }}</p>
                 @endif
 
-                <div class="mt-8 flex items-center space-x-6">
-                    <div>
-                        <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Visit Us</p>
-                        <p class="text-xs font-bold text-slate-900">{{ $city['contact']['address_display'] }}</p>
+                {{-- Social Proof & Call Us --}}
+                <div class="mt-8 flex flex-wrap items-center gap-6">
+                    <div class="flex items-center space-x-4 bg-white px-5 py-3 rounded-full shadow-lg border border-slate-100">
+                        <div class="flex -space-x-2">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-8 h-8 rounded-full border-2 border-white" alt="">
+                        </div>
+                        <p class="text-sm">
+                            <span class="text-emerald-600 font-bold">{{ $city['social_proof']['families_joined'] }} local families</span>
+                            <span class="text-slate-600">joined this month</span>
+                        </p>
                     </div>
                     <div>
                         <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Call Us</p>

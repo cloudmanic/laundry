@@ -122,6 +122,10 @@ return [
                 ],
             ],
 
+            'social_proof' => [
+                'families_joined' => 142,
+            ],
+
             'testimonial' => [
                 'quote' => "As a mom of three in Sherwood, Sherwood Laundry didn't just clean my clothes—they gave me my Sundays back.",
                 'author' => 'Sarah J.',
