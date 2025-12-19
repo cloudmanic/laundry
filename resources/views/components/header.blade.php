@@ -13,9 +13,9 @@
         </a>
 
         <nav class="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-600 uppercase tracking-widest">
-            <a href="#how-it-works" class="hover:text-emerald-600 transition-colors">Process</a>
-            <a href="#pricing" class="hover:text-emerald-600 transition-colors">Pricing</a>
-            <a href="#faq" class="hover:text-emerald-600 transition-colors">FAQ</a>
+            <a href="{{ url('/#how-it-works') }}" class="hover:text-emerald-600 transition-colors">Process</a>
+            <a href="{{ url('/#pricing') }}" class="hover:text-emerald-600 transition-colors">Pricing</a>
+            <a href="{{ url('/#faq') }}" class="hover:text-emerald-600 transition-colors">FAQ</a>
         </nav>
 
         <div class="flex items-center space-x-4">
@@ -24,7 +24,7 @@
                 <p class="text-emerald-600 font-bold">{{ $city['pricing']['family']['price_display'] }} / Month</p>
             </div>
             <a
-                href="#signup"
+                href="{{ url('/#signup') }}"
                 class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-emerald-600 transition-all shadow-lg text-sm"
             >
                 Get Started

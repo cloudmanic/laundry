@@ -62,8 +62,6 @@ return [
                 'Sherwood',
                 'Newberg',
                 'Dundee',
-                'McMinnville',
-                'Wilsonville',
             ],
 
             'social' => [
