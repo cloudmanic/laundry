@@ -35,9 +35,10 @@ return [
         ],
     ],
 
-    'brevo' => [
-        'api_key' => env('BREVO_API_KEY'),
-        'list_id' => env('BREVO_LIST_ID'),
+    'sendy' => [
+        'url' => env('SENDY_URL'),
+        'api_key' => env('SENDY_API_KEY'),
+        'list_id' => env('SENDY_LIST_ID'),
     ],
 
 ];
