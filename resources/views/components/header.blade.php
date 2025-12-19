@@ -11,7 +11,7 @@
                 SL
             </div>
             <span class="text-2xl font-bold tracking-tight text-slate-900">
-                Sherwood <span class="text-emerald-600 font-serif italic">Laundry</span>
+                {{ $city['name'] }} <span class="text-emerald-600 font-serif italic">Laundry</span>
             </span>
         </a>
 
@@ -23,8 +23,8 @@
 
         <div class="flex items-center space-x-4">
             <div class="hidden md:block text-right mr-4">
-                <p class="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none">The Family Plan</p>
-                <p class="text-emerald-600 font-bold">$200 / Month</p>
+                <p class="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none">{{ $city['pricing']['family']['name'] }}</p>
+                <p class="text-emerald-600 font-bold">{{ $city['pricing']['family']['price_display'] }} / Month</p>
             </div>
             <a
                 href="#signup"

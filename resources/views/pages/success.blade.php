@@ -6,7 +6,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Thank You | Sherwood Laundry')
+@section('title', 'Thank You | ' . $city['brand'])
 
 @section('content')
     <div class="min-h-screen bg-slate-50 flex flex-col">
@@ -16,7 +16,7 @@
                     SL
                 </div>
                 <span class="text-2xl font-bold tracking-tight text-slate-900">
-                    Sherwood <span class="text-emerald-600 font-serif italic">Laundry</span>
+                    {{ $city['name'] }} <span class="text-emerald-600 font-serif italic">Laundry</span>
                 </span>
             </a>
         </header>
@@ -35,9 +35,9 @@
                 </p>
 
                 <div class="bg-emerald-50 rounded-3xl p-8 mb-10 text-left border border-emerald-100">
-                    <h3 class="text-emerald-800 font-bold text-lg mb-2">Launching February 1st, 2026</h3>
+                    <h3 class="text-emerald-800 font-bold text-lg mb-2">Launching {{ $city['launch_date'] }}</h3>
                     <p class="text-emerald-700">
-                        Sherwood Laundry is putting the finishing touches on our premium Sherwood facility. You'll be the very first to know when our vans hit the road. Keep an eye on your inbox for a special "Founding Family" discount.
+                        {{ $city['brand'] }} is putting the finishing touches on our premium {{ $city['name'] }} facility. You'll be the very first to know when our vans hit the road. Keep an eye on your inbox for a special "Founding Family" discount.
                     </p>
                 </div>
 
@@ -50,14 +50,14 @@
 
                 <div class="mt-12 pt-12 border-t border-slate-100">
                     <p class="text-sm text-slate-400">
-                        Questions? Call us at <a href="tel:503-451-0062" class="text-emerald-600 font-semibold">503-451-0062</a>
+                        Questions? Call us at <a href="tel:{{ $city['contact']['phone'] }}" class="text-emerald-600 font-semibold">{{ $city['contact']['phone'] }}</a>
                     </p>
                 </div>
             </div>
         </main>
 
         <footer class="py-8 text-center text-slate-400 text-sm">
-            &copy; {{ date('Y') }} Sherwood Laundry. Sherwood, Oregon.
+            &copy; {{ date('Y') }} {{ $city['brand'] }}. {{ $city['name'] }}, Oregon.
         </footer>
     </div>
 @endsection

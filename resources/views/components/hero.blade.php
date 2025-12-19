@@ -10,7 +10,7 @@
             {{-- Left Side: Content --}}
             <div class="flex-1 text-left">
                 <div class="inline-flex items-center space-x-3 bg-emerald-50 border border-emerald-100 px-4 py-2 rounded-full mb-8">
-                    <span class="text-emerald-700 text-xs font-black uppercase tracking-[0.2em]">Locally Owned - Newberg, Oregon</span>
+                    <span class="text-emerald-700 text-xs font-black uppercase tracking-[0.2em]">Locally Owned - {{ $city['contact']['address']['city'] }}, {{ $city['contact']['address']['state'] }}</span>
                 </div>
 
                 <h1 class="text-5xl md:text-7xl font-black leading-[1] mb-6 text-slate-900 tracking-tighter">
@@ -19,7 +19,7 @@
                 </h1>
 
                 <p class="text-xl md:text-2xl font-bold text-slate-600 mb-8 leading-tight">
-                    The Family Plan: <span class="text-slate-900">$200 a month</span> for a family of four. <br class="hidden md:block" />
+                    {{ $city['pricing']['family']['name'] }}: <span class="text-slate-900">{{ $city['pricing']['family']['price_display'] }} a month</span> for a family of four. <br class="hidden md:block" />
                     We pick up your laundry, wash it, fold it, and deliver it fresh the next day.
                 </p>
 
@@ -37,7 +37,7 @@
                         <span>Next-day turnaround guaranteed</span>
                     </div>
                     <p class="text-sm text-slate-400 font-medium ml-9 italic">
-                        Smaller household? Individual bags available for $65.
+                        Smaller household? Individual bags available for {{ $city['pricing']['light']['price_display'] }}.
                     </p>
                 </div>
 
@@ -65,11 +65,11 @@
                 <div class="mt-8 flex items-center space-x-6">
                     <div>
                         <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Visit Us</p>
-                        <p class="text-xs font-bold text-slate-900">901 Bricher St, Newberg</p>
+                        <p class="text-xs font-bold text-slate-900">{{ $city['contact']['address_display'] }}</p>
                     </div>
                     <div>
                         <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Call Us</p>
-                        <p class="text-xs font-bold text-slate-900">503-451-0062</p>
+                        <p class="text-xs font-bold text-slate-900">{{ $city['contact']['phone'] }}</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     {{-- Replace with /images/hero-laundry-bag.jpg when image is generated --}}
                     <img
                         src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800&h=1000"
-                        alt="Sherwood Laundry service in action"
+                        alt="{{ $city['brand'] }} service in action"
                         class="aspect-[4/5] lg:aspect-[3/4] shadow-2xl rounded-[60px] object-cover w-full"
                     />
                 </div>

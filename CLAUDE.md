@@ -8,7 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Sherwood Laundry is a Laravel 12 marketing website for a laundry pickup and delivery service. The frontend uses Tailwind CSS 4 with Vite, and Alpine.js for interactivity.
+This is a multi-city laundry service marketing website. Currently launching in Sherwood, Oregon (sherwoodlaundry.com), but the codebase is designed to support multiple cities/domains (e.g., bendlaundry.com, newberglaundry.com) from a single codebase.
+
+**Key architectural decision:** All city-specific content (pricing, contact info, service areas, branding) is configuration-driven via `config/city.php`. The active city is set by the `CITY_KEY` environment variable. Never hardcode city-specific values in templates.
 
 ## Development Commands
 
@@ -37,6 +39,12 @@ composer setup
 
 ## Architecture
 
+**Multi-City Configuration (`config/city.php`):**
+- Each city has: name, brand, contact info, pricing plans, service areas, testimonials
+- Active city determined by `CITY_KEY` env variable
+- City config is shared to all views via `AppServiceProvider`
+- Access in Blade templates via `$city['key']`
+
 **Controllers:**
 - `PageController` - Renders landing and success pages
 - `SubscribeController` - Handles email signups via Sendy API
@@ -53,6 +61,12 @@ composer setup
 
 **External Services:**
 - Sendy email marketing (configured in `.env`: `SENDY_URL`, `SENDY_API_KEY`, `SENDY_LIST_ID`)
+
+## Adding a New City
+
+1. Add city configuration to `config/city.php` under the `cities` array
+2. Set `CITY_KEY=newcity` in the deployment's `.env`
+3. No code changes needed - templates automatically use the active city's config
 
 ## Key Technical Details
 
