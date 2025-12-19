@@ -46,6 +46,7 @@ return [
             'launch_date' => 'February 1st, 2026',
 
             'contact' => [
+                'email' => 'help@sherwoodlaundry.com',
                 'phone' => '503-451-0062',
                 'address' => [
                     'street' => '901 Brutscher Street',
