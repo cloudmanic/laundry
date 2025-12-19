@@ -7,9 +7,9 @@
 <section class="py-24 bg-white" id="pricing">
     <div class="container mx-auto px-4">
         <div class="text-center mb-20">
-            <h2 class="text-4xl font-bold mb-4 text-slate-900 italic font-serif">Simplicity in every bag.</h2>
+            <h2 class="text-4xl font-bold mb-4 text-slate-900 italic font-serif">Weekly service. Monthly pricing.</h2>
             <p class="text-slate-600 max-w-2xl mx-auto text-lg">
-                Choose the plan that fits your family's pace. All subscriptions are flexible and locally managed.
+                We pick up your laundry <span class="underline decoration-emerald-500 decoration-2 font-semibold text-slate-900">every week</span>—you pay one simple monthly price. Cancel anytime.
             </p>
         </div>
 

@@ -28,7 +28,7 @@
                         <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                         </div>
-                        <span>4 Signature Bags included every month (one per person)</span>
+                        <span>4 bags picked up every week (one per person)</span>
                     </div>
                     <div class="flex items-center space-x-3 text-slate-700 font-semibold">
                         <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -37,7 +37,7 @@
                         <span>Next-day turnaround guaranteed</span>
                     </div>
                     <p class="text-sm text-slate-400 font-medium ml-9 italic">
-                        Smaller household? Individual bags available for {{ $city['pricing']['light']['price_display'] }}.
+                        Smaller household? 1 bag weekly for {{ $city['pricing']['light']['price_display'] }}/mo.
                     </p>
                 </div>
 
