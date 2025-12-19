@@ -36,6 +36,10 @@ class SubscribeController extends Controller
             return redirect()->route('success');
         }
 
+        // Get the active city config for tagging
+        $cityKey = config('city.active');
+        $city = config("city.cities.{$cityKey}");
+
         try {
             $response = Http::withHeaders([
                 'api-key' => $apiKey,
@@ -44,6 +48,9 @@ class SubscribeController extends Controller
                 'email' => $request->email,
                 'listIds' => [(int) $listId],
                 'updateEnabled' => true,
+                'attributes' => [
+                    'SOURCE' => $city['brand'] ?? $cityKey,
+                ],
             ]);
 
             // Check for success (201 Created or 204 No Content for existing contact)
