@@ -17,6 +17,7 @@
         @include('components.features')
         @include('components.educational-callout')
         @include('components.pricing')
+        @include('components.mobile-app')
         @include('components.faq')
     </main>
 
