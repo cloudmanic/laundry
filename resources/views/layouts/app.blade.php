@@ -24,6 +24,13 @@
     {{-- Vite Assets --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    {{-- Plausible Analytics --}}
+    <script async src="https://plausible.io/js/pa-laEVUhnVFYc8uuRNqOX8Z.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
+
     <style>
         html {
             scroll-behavior: smooth;
