@@ -65,6 +65,7 @@
                     </div>
                 </div>
 
+                {{-- App Store buttons - uncomment when app is ready
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-black rounded-xl hover:bg-slate-800 transition-colors">
                         <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="white">
@@ -85,6 +86,7 @@
                         </div>
                     </a>
                 </div>
+                --}}
             </div>
 
             {{-- Phone Mockup --}}
