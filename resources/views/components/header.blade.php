@@ -6,10 +6,7 @@
 --}}
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center space-x-2 group">
-            <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-emerald-700 transition-colors">
-                SL
-            </div>
+        <a href="/" class="flex items-center group">
             <span class="text-2xl font-bold tracking-tight text-slate-900">
                 {{ $city['name'] }} <span class="text-emerald-600 font-serif italic">Laundry</span>
             </span>

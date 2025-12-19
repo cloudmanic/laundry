@@ -21,7 +21,7 @@
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Leave it Out</h3>
                 <p class="text-slate-600 leading-relaxed px-4">
-                    Place your dirty laundry in your Sherwood bags outside your door in the morning.
+                    Place your dirty laundry in your {{ $city['name'] }} bags outside your door in the morning.
                 </p>
                 <div class="hidden lg:block absolute top-10 -right-4 w-12 h-0.5 bg-slate-100"></div>
             </div>
@@ -36,7 +36,7 @@
                 </div>
                 <h3 class="text-2xl font-bold mb-4">We Pick Up</h3>
                 <p class="text-slate-600 leading-relaxed px-4">
-                    Our local Newberg team swings by and whisk your laundry away to our premium facility.
+                    Our local {{ $city['contact']['address']['city'] }} team swings by and whisks your laundry away to our premium facility.
                 </p>
                 <div class="hidden lg:block absolute top-10 -right-4 w-12 h-0.5 bg-slate-100"></div>
             </div>

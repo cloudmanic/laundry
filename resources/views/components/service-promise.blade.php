@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <p class="text-white font-bold text-sm">Locally Owned</p>
-                    <p class="text-slate-500 text-[10px] uppercase tracking-widest">{{ $city['service_areas'][0] }} & {{ $city['service_areas'][1] }}</p>
+                    <p class="text-slate-500 text-[10px] uppercase tracking-widest">{{ $city['name'] }}, Oregon</p>
                 </div>
             </div>
             <div class="flex items-center space-x-4">

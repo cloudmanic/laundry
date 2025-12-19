@@ -6,7 +6,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Sherwood Laundry | Premium Pickup & Delivery')
+@section('title', $city['brand'] . ' | ' . $city['tagline'])
 
 @section('content')
     @include('components.header')

@@ -4,7 +4,7 @@
     Copyright: 2025 Cloudmanic Labs, LLC
     Date: 2025-12-18
 --}}
-<section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white" id="signup">
+<section class="relative pt-28 pb-20 lg:pt-36 lg:pb-32 overflow-hidden bg-white" id="signup">
     <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-16">
             {{-- Left Side: Content --}}
@@ -19,7 +19,7 @@
                 </h1>
 
                 <p class="text-xl md:text-2xl font-bold text-slate-600 mb-8 leading-tight">
-                    {{ $city['pricing']['family']['name'] }}: <span class="text-slate-900">{{ $city['pricing']['family']['price_display'] }} a month</span> for a family of four. <br class="hidden md:block" />
+                    Get weekly laundry service for a family of 4 for only <span class="text-slate-900">{{ $city['pricing']['family']['price_display'] }}/month</span>. <br class="hidden md:block" />
                     We pick up your laundry, wash it, fold it, and deliver it fresh the next day.
                 </p>
 
@@ -28,7 +28,7 @@
                         <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
                         </div>
-                        <span>4 Signature Bags included every month</span>
+                        <span>4 Signature Bags included every month (one per person)</span>
                     </div>
                     <div class="flex items-center space-x-3 text-slate-700 font-semibold">
                         <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -41,7 +41,7 @@
                     </p>
                 </div>
 
-                <form action="{{ route('subscribe') }}" method="POST" class="w-full max-w-md bg-white p-2 rounded-3xl border-2 border-slate-200 shadow-xl flex flex-col sm:flex-row gap-2">
+                <form action="{{ route('subscribe') }}" method="POST" class="w-full max-w-xl bg-white p-2 rounded-3xl border-2 border-slate-200 shadow-xl flex flex-col sm:flex-row gap-2">
                     @csrf
                     <input
                         type="email"
@@ -78,24 +78,24 @@
                         </p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1">Call Us</p>
-                        <p class="text-xs font-bold text-slate-900">{{ $city['contact']['phone'] }}</p>
+                        <p class="text-xs font-black uppercase text-slate-400 tracking-widest mb-1">Call Us</p>
+                        <p class="text-base font-bold text-slate-900">{{ $city['contact']['phone'] }}</p>
                     </div>
                 </div>
             </div>
 
             {{-- Right Side: Visual --}}
-            <div class="flex-1 w-full relative">
+            <div class="flex-1 w-full relative lg:max-w-md xl:max-w-lg">
                 <div class="relative z-10">
                     <img
                         src="/images/sherwood-bag-van.png"
                         alt="{{ $city['brand'] }} service in action"
-                        class="aspect-[4/5] lg:aspect-[3/4] shadow-2xl rounded-[60px] object-cover w-full"
+                        class="aspect-[4/5] lg:aspect-[3/4] shadow-2xl rounded-[50px] object-cover w-full"
                     />
                 </div>
 
                 {{-- Decorative blob behind image --}}
-                <div class="absolute -top-10 -right-10 w-full h-full bg-emerald-50 rounded-[60px] -z-10 translate-x-4 translate-y-4"></div>
+                <div class="absolute -top-10 -right-10 w-full h-full bg-emerald-50 rounded-[50px] -z-10 translate-x-4 translate-y-4"></div>
 
                 {{-- Floating Trust Badge --}}
                 <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-2xl z-20 hidden md:block border border-slate-100">

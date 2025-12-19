@@ -59,7 +59,7 @@
                     </svg>
                 </button>
                 <div x-show="openIndex === 1" x-collapse class="px-6 pb-5 text-slate-600 leading-relaxed">
-                    Upon signing up, we'll provide you with our signature Sherwood Laundry bags. Just fill them up and leave them on your porch or designated pickup spot by 8:00 AM on your scheduled day.
+                    Upon signing up, we'll provide you with our signature {{ $city['brand'] }} bags. Just fill them up and leave them on your porch or designated pickup spot by 8:00 AM on your scheduled day.
                 </div>
             </div>
 
@@ -127,7 +127,7 @@
                     class="w-full px-6 py-5 text-left flex justify-between items-center group"
                 >
                     <span class="font-semibold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                        Are you really in Sherwood?
+                        Are you really in {{ $city['name'] }}?
                     </span>
                     <svg
                         class="w-5 h-5 transition-transform duration-300"
@@ -140,7 +140,7 @@
                     </svg>
                 </button>
                 <div x-show="openIndex === 4" x-collapse class="px-6 pb-5 text-slate-600 leading-relaxed">
-                    Yes! We are 100% locally owned and operated. While our mailing address is in Newberg, we are focused on serving the Sherwood community with local drivers and care.
+                    Yes! We are 100% locally owned and operated. While our mailing address is in {{ $city['contact']['address']['city'] }}, we are focused on serving the {{ $city['name'] }} community with local drivers and care.
                 </div>
             </div>
         </div>
