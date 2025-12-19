@@ -41,13 +41,13 @@
                     </p>
                 </div>
 
-                <form action="{{ route('subscribe') }}" method="POST" class="w-full max-w-xl bg-white p-2 rounded-3xl border-2 border-slate-200 shadow-xl flex flex-col sm:flex-row gap-2">
+                <form action="{{ route('subscribe') }}" method="POST" class="w-full max-w-xl bg-white p-2 rounded-3xl border-2 {{ $errors->has('email') ? 'border-red-400' : 'border-slate-200' }} shadow-xl flex flex-col sm:flex-row gap-2">
                     @csrf
                     <input
-                        type="email"
+                        type="text"
                         name="email"
                         placeholder="Enter email to get started..."
-                        required
+                        value="{{ old('email') }}"
                         class="flex-grow px-6 py-4 rounded-2xl focus:outline-none text-slate-900 font-medium"
                     />
                     <button
@@ -57,6 +57,10 @@
                         <span>Free My Weekend</span>
                     </button>
                 </form>
+
+                @error('email')
+                    <p class="mt-4 text-red-600 text-sm font-medium">{{ $message }}</p>
+                @enderror
 
                 @if(session('error'))
                     <p class="mt-4 text-red-600 text-sm font-medium">{{ session('error') }}</p>
