@@ -27,16 +27,12 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 bg-emerald-600 relative overflow-hidden flex items-center justify-center min-h-[300px]">
+            <div class="flex-1 relative overflow-hidden min-h-[300px]">
                 <img
-                    src="https://images.unsplash.com/photo-1545173168-9f1947eeba01?auto=format&fit=crop&q=80&w=1000"
-                    class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
-                    alt="laundry bag background"
+                    src="{{ asset('images/sherwood-laundry-family.png') }}"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    alt="Family with 4 Sherwood Laundry bags"
                 />
-                <div class="relative z-10 text-center text-white px-8">
-                    <p class="text-6xl font-bold mb-4">4</p>
-                    <p class="text-xl font-bold uppercase tracking-widest">Bags Per Family</p>
-                </div>
             </div>
         </div>
     </div>

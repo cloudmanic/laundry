@@ -8,11 +8,8 @@
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div class="col-span-1 lg:col-span-2">
-                <div class="flex items-center space-x-3 text-white font-bold text-2xl mb-6">
-                    <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                        SL
-                    </div>
-                    <span>{{ $city['brand'] }}</span>
+                <div class="text-white font-bold text-2xl mb-6 tracking-tight">
+                    {{ $city['name'] }} <span class="text-emerald-500 font-serif italic">Laundry</span>
                 </div>
                 <p class="max-w-md mb-8 leading-relaxed">
                     {{ $city['name'] }}'s premier laundry pickup and delivery service. We believe families deserve more time together, and less time in the laundry room.
