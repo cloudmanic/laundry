@@ -9,7 +9,7 @@
         <div class="text-center mb-20">
             <h2 class="text-4xl font-bold mb-4 text-slate-900 italic font-serif">Weekly service. Monthly pricing.</h2>
             <p class="text-slate-600 max-w-2xl mx-auto text-lg">
-                We pick up your laundry <span class="underline decoration-emerald-500 decoration-2 font-semibold text-slate-900">every week</span>—you pay one simple monthly price. Cancel anytime.
+                We pick up your laundry <span class="font-semibold text-slate-900 border-b-2 border-emerald-500">every week</span>—you pay one simple monthly price. Cancel anytime.
             </p>
         </div>
 
@@ -40,7 +40,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
-                                <span>{{ $feature }}</span>
+                                <span>{!! $feature !!}</span>
                             </li>
                         @endforeach
                     </ul>
