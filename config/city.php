@@ -47,7 +47,7 @@ return [
 
             'contact' => [
                 'support_email' => 'help@sherwoodlaundry.com',
-                'phone' => '503-451-0062',
+                'phone' => '503-610-0227',
                 'address' => [
                     'street' => '901 Brutscher Street',
                     'suite' => 'D112',
