@@ -40,7 +40,7 @@ jobs:
       # -------------------------------------------------------------------------
       # Step 2: Set up PHP environment
       # -------------------------------------------------------------------------
-      # We use PHP 8.2 to match the project's requirements (composer.json: "php": "^8.2")
+      # We use PHP 8.4 to match the project's composer.lock requirements.
       # Extensions enabled:
       # - dom, curl, libxml, mbstring: Required by Laravel
       # - zip: Required by Composer for package installation
@@ -52,7 +52,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.4'
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, intl
           coverage: none
 
@@ -177,11 +177,12 @@ jobs:
       # Step 2: Set up PHP environment
       # -------------------------------------------------------------------------
       # Only need PHP for running Pint - no extensions required.
+      # Using PHP 8.4 to match the project's composer.lock requirements.
       # -------------------------------------------------------------------------
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.4'
           coverage: none
 
       # -------------------------------------------------------------------------
