@@ -9,6 +9,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -58,13 +59,30 @@ return new class extends Migration
      */
     public function down(): void
     {
+        // Add name column back with default (required for SQLite with existing data)
         Schema::table('users', function (Blueprint $table) {
-            $table->string('name')->after('id');
+            $table->string('name')->default('')->after('id');
         });
 
+        // Populate name from first_name + last_name
+        DB::table('users')->get()->each(function ($user) {
+            DB::table('users')
+                ->where('id', $user->id)
+                ->update(['name' => trim($user->first_name.' '.$user->last_name)]);
+        });
+
+        // Remove the default constraint by recreating without it (SQLite limitation)
+        // For SQLite, we'll leave the default in place as it's acceptable for rollback
+
+        // Drop indexes first (required for SQLite)
         Schema::table('users', function (Blueprint $table) {
+            $table->dropUnique(['uuid']);
             $table->dropIndex(['region_key']);
             $table->dropIndex(['stripe_customer_id']);
+        });
+
+        // Drop columns in separate statement
+        Schema::table('users', function (Blueprint $table) {
             $table->dropColumn([
                 'uuid',
                 'first_name',
