@@ -46,11 +46,22 @@ Route::get('/register', Register::class)
     ->middleware('guest')
     ->name('register');
 
-// Login route (placeholder - will be implemented with Livewire)
-Route::get('/login', function () {
-    // TODO: Implement login with Livewire component
-    return redirect()->route('register');
-})->middleware('guest')->name('login');
+// Login route (Livewire component)
+Route::get('/login', \App\Livewire\Auth\Login::class)
+    ->middleware('guest')
+    ->name('login');
+
+// Forgot password route (placeholder - will be implemented with Livewire)
+Route::get('/forgot-password', function () {
+    // TODO: Implement forgot password with Livewire component
+    return view('pages.forgot-password-placeholder');
+})->middleware('guest')->name('password.request');
+
+// Reset password route (placeholder - will be implemented with Livewire)
+Route::get('/reset-password/{token}', function ($token) {
+    // TODO: Implement reset password with Livewire component
+    return view('pages.reset-password-placeholder', ['token' => $token]);
+})->middleware('guest')->name('password.reset');
 
 // Temporary onboarding placeholder route
 Route::get('/onboarding', function () {
