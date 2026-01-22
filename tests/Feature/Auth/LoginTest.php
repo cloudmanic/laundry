@@ -470,26 +470,24 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Test placeholder pages exist for forgot and reset password.
+     * Test forgot password page exists and is functional.
      */
-    public function test_forgot_password_placeholder_page_exists(): void
+    public function test_forgot_password_page_exists(): void
     {
         $response = $this->get('/forgot-password');
 
         $response->assertStatus(200);
-        $response->assertSee('Forgot Password');
-        $response->assertSee('This feature is coming soon');
+        $response->assertSee('Forgot Your Password?');
     }
 
     /**
-     * Test reset password placeholder page exists.
+     * Test reset password page exists and is functional.
      */
-    public function test_reset_password_placeholder_page_exists(): void
+    public function test_reset_password_page_exists(): void
     {
         $response = $this->get('/reset-password/some-token');
 
         $response->assertStatus(200);
-        $response->assertSee('Reset Password');
-        $response->assertSee('This feature is coming soon');
+        $response->assertSee('Reset Your Password');
     }
 }

@@ -9,6 +9,7 @@
 
 namespace App\Models;
 
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -229,5 +230,18 @@ class User extends Authenticatable implements MustVerifyEmail
     public function primaryAddress(): ?Address
     {
         return $this->addresses()->where('is_primary', true)->first();
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * Overrides the default Laravel notification to use our custom
+     * branded email template with region-specific styling.
+     *
+     * @param  string  $token  The password reset token
+     */
+    public function sendPasswordResetNotification($token): void
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 }
