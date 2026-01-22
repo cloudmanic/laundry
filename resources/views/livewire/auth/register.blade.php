@@ -197,7 +197,7 @@
                         <input
                             type="checkbox"
                             id="terms"
-                            wire:model="terms"
+                            wire:model.live="terms"
                             class="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 focus:ring-offset-0"
                         />
                     </div>

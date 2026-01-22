@@ -189,6 +189,14 @@ class Register extends Component
     }
 
     /**
+     * Real-time validation for terms checkbox.
+     */
+    public function updatedTerms(): void
+    {
+        $this->validateOnly('terms');
+    }
+
+    /**
      * Toggle password visibility.
      */
     public function togglePasswordVisibility(): void
