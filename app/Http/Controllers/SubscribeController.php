@@ -18,7 +18,6 @@ class SubscribeController extends Controller
     /**
      * Store a new email subscription via Sendy API.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
@@ -34,6 +33,7 @@ class SubscribeController extends Controller
         // If Sendy is not configured, just redirect to success
         if (empty($sendyUrl) || empty($apiKey) || empty($listId)) {
             Log::warning('Sendy not configured. Skipping subscription.');
+
             return redirect()->route('success');
         }
 
@@ -53,11 +53,13 @@ class SubscribeController extends Controller
             }
 
             // Log the error and redirect back with error message
-            Log::error('Sendy subscription failed: ' . $result);
+            Log::error('Sendy subscription failed: '.$result);
+
             return redirect()->back()->with('error', 'Unable to subscribe. Please try again later.');
 
         } catch (\Exception $e) {
-            Log::error('Sendy API error: ' . $e->getMessage());
+            Log::error('Sendy API error: '.$e->getMessage());
+
             return redirect()->back()->with('error', 'Unable to subscribe. Please try again later.');
         }
     }

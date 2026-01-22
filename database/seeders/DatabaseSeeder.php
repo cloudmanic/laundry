@@ -1,8 +1,14 @@
 <?php
 
+/**
+ * File: DatabaseSeeder.php
+ * Description: Main database seeder that orchestrates all seeders
+ * Copyright: 2026 Cloudmanic Labs, LLC
+ * Date: 2026-01-21
+ */
+
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,14 +18,17 @@ class DatabaseSeeder extends Seeder
 
     /**
      * Seed the application's database.
+     *
+     * This seeder orchestrates all other seeders in the correct order.
+     * Run with: php artisan db:seed
+     * Or fresh migrate with seed: php artisan migrate:fresh --seed
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // 1. Create test users with addresses, preferences, and notification settings
+        $this->call(UserSeeder::class);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // 2. Create subscriptions, pickups, bags, and invoices for test users
+        $this->call(SubscriptionSeeder::class);
     }
 }
