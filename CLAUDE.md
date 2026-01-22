@@ -74,3 +74,23 @@ composer setup
 - Alpine.js loaded via CDN with collapse plugin for FAQ accordion
 - Fonts: Inter (body) and Playfair Display (headings) via Google Fonts
 - SQLite database by default
+- Frontend uses Livewire components
+
+## Coding Standards
+
+### Verbose Logging
+Always add verbose logging throughout the codebase. This is a standard practice for this project:
+- Log all significant actions (user registration, login, subscription changes, payments, etc.)
+- Log at appropriate levels: `info` for normal operations, `warning` for unusual but handled cases, `error` for failures
+- Include relevant context in log messages (user ID, action, relevant data)
+- Use structured logging with context arrays: `Log::info('User registered', ['user_id' => $user->id, 'email' => $user->email])`
+- Log entry and exit of important methods when debugging complex flows
+- Never log sensitive data (passwords, full credit card numbers, etc.)
+
+### UI/UX for Conversion Funnels
+This is a subscription business where users come from paid ads (Facebook, etc.). Every user-facing page should:
+- Be sales-minded with clear value propositions
+- Include trust signals and social proof
+- Minimize friction in the signup/checkout flow
+- Have clear CTAs that guide users to the next step
+- Reinforce benefits at each step to prevent drop-off
