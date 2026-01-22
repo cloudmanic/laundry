@@ -9,7 +9,9 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SubscribeController;
+use App\Livewire\Auth\ForgotPassword;
 use App\Livewire\Auth\Register;
+use App\Livewire\Auth\ResetPassword;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,17 +53,15 @@ Route::get('/login', \App\Livewire\Auth\Login::class)
     ->middleware('guest')
     ->name('login');
 
-// Forgot password route (placeholder - will be implemented with Livewire)
-Route::get('/forgot-password', function () {
-    // TODO: Implement forgot password with Livewire component
-    return view('pages.forgot-password-placeholder');
-})->middleware('guest')->name('password.request');
+// Forgot password route (Livewire component)
+Route::get('/forgot-password', ForgotPassword::class)
+    ->middleware('guest')
+    ->name('password.request');
 
-// Reset password route (placeholder - will be implemented with Livewire)
-Route::get('/reset-password/{token}', function ($token) {
-    // TODO: Implement reset password with Livewire component
-    return view('pages.reset-password-placeholder', ['token' => $token]);
-})->middleware('guest')->name('password.reset');
+// Reset password route (Livewire component)
+Route::get('/reset-password/{token}', ResetPassword::class)
+    ->middleware('guest')
+    ->name('password.reset');
 
 // Temporary onboarding placeholder route
 Route::get('/onboarding', function () {
