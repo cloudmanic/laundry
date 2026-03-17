@@ -4,7 +4,7 @@
     Copyright: 2025 Cloudmanic Labs, LLC
     Date: 2025-12-18
 --}}
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100" x-data>
     <div class="container mx-auto px-4 h-20 flex items-center justify-between">
         <a href="/" class="flex items-center group">
             <span class="text-2xl font-bold tracking-tight text-slate-900">
