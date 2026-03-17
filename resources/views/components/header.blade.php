@@ -23,12 +23,12 @@
                 <p class="text-[10px] font-black uppercase tracking-tighter text-slate-400 leading-none">{{ $city['pricing']['family']['name'] }}</p>
                 <p class="text-emerald-600 font-bold">{{ $city['pricing']['family']['price_display'] }} / Month</p>
             </div>
-            <a
-                href="{{ url('/#signup') }}"
+            <button
+                @click="$dispatch('open-signup-modal', { plan: '{{ $city['pricing']['family']['name'] }}' })"
                 class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-emerald-600 transition-all shadow-lg text-sm"
             >
                 Get Started
-            </a>
+            </button>
         </div>
     </div>
 </header>

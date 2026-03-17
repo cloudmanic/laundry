@@ -4,7 +4,7 @@
     Copyright: 2026 Cloudmanic Labs, LLC
     Date: 2026-03-17
 --}}
-<section class="py-24 bg-white" id="pricing" x-data="{ showModal: false, selectedPlan: '' }">
+<section class="py-24 bg-white" id="pricing" x-data="{ showModal: false, selectedPlan: '' }" @open-signup-modal.window="selectedPlan = $event.detail.plan; showModal = true">
     <div class="container mx-auto px-4">
         <div class="text-center mb-20">
             <h2 class="text-4xl font-bold mb-4 text-slate-900 italic font-serif">Weekly service. Monthly pricing.</h2>
