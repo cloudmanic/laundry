@@ -43,7 +43,7 @@ return [
             'brand' => 'Sherwood Laundry',
             'tagline' => 'Premium Pickup & Delivery',
             'domain' => 'sherwoodlaundry.com',
-            'launch_date' => 'February 1st, 2026',
+            'launch_date' => 'May 1st, 2026',
 
             'contact' => [
                 'support_email' => 'help@sherwoodlaundry.com',
